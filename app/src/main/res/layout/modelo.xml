@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/idCardView"
     android:layout_width="180dp"
     android:layout_height="300dp"
     android:layout_margin="5dp"
     android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground">
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="10dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#f4d690"
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/id_imgPerso"
+            android:id="@+id/id_imagempersonagem"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/albedo" />
+            android:src="#2c2c2c" />
 
         <TextView
-            android:background="#d39524"
-            android:id="@+id/id_lblTituloLivro"
+            android:id="@+id/id_nomepersonagem"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:background="#d39524"
             android:gravity="center"
-            android:text="Albedo"
+            android:text="Nome do personagem"
             android:textColor="#2d2d2d"
             android:textSize="16sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="Idade do personagem" />
+
+        <RatingBar
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:numStars="5" />
 
     </LinearLayout>
 
